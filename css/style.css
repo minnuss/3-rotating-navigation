@@ -1,0 +1,152 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-bg: #d4d8e7;
+  --color-bg-sec: #2e393a;
+  --color-font: #5fa4a5;
+  --color-sec: #dd8069;
+  --color-third: #f8be59;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: var(--color-bg-sec);
+}
+
+.hero {
+  overflow-x: hidden;
+}
+
+.hero__content {
+  transform-origin: top left;
+  transition: transform 0.5s ease-in-out;
+  width: 100vw;
+  min-height: 100vh;
+  padding: 7vh 5vw;
+}
+
+.hero__content__circle {
+  position: fixed;
+  top: -100px;
+  left: -100px;
+}
+
+.hero__content__circle__box {
+  background-color: var(--color-sec);
+  border-radius: 50%;
+  z-index: 1;
+  width: 200px;
+  height: 200px;
+  position: relative;
+  transition: transform 0.5s linear;
+}
+
+.hero__content__circle__box--buton {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 100px;
+  color: #d4d8e7;
+  font-size: 2.5rem;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.hero__content__circle__box .open {
+  left: 60%;
+}
+
+.hero__content__circle__box .close {
+  top: 60%;
+  transform: rotate(90deg);
+  transform-origin: top left;
+}
+
+.hero__content__page {
+  text-align: center;
+}
+
+.hero__content__page--title, .hero__content__page--h3 {
+  text-align: center;
+  font-size: 4rem;
+  color: var(--color-bg);
+  margin: 2vh 0;
+}
+
+.hero__content__page--para {
+  text-align: left;
+  color: var(--color-font);
+  font-size: 2rem;
+}
+
+.hero__content__page--h3 {
+  font-size: 3rem;
+}
+
+.hero__content__page--img {
+  max-width: 60%;
+  margin-bottom: 2vh;
+}
+
+.hero__content.show-nav {
+  transform: rotate(-20deg);
+}
+
+.hero__content__circle__box.show-nav {
+  transform: rotate(-75deg);
+}
+
+.hero__nav {
+  position: fixed;
+  bottom: 40px;
+  left: 0;
+  z-index: 50;
+}
+
+.hero__nav__ul {
+  list-style: none;
+  padding-left: 30px;
+}
+
+.hero__nav__ul--li {
+  text-transform: uppercase;
+  margin: 40px 0;
+  font-size: 2rem;
+  transform: translateX(-125%);
+  transition: all 0.5s ease-in-out;
+}
+
+.hero__nav__ul--li a {
+  text-decoration: none;
+  color: var(--color-bg);
+}
+
+.hero__nav__ul--li a i {
+  margin: 0 10px;
+}
+
+.hero__nav__ul--li.show-nav {
+  transform: translateX(0%);
+}
+
+.hero__nav__ul--li.show-nav + li {
+  margin-left: 30px;
+  transform: translateX(10%);
+}
+
+.hero__nav__ul--li.show-nav + li + li {
+  margin-left: 60px;
+}
+/*# sourceMappingURL=style.css.map */
