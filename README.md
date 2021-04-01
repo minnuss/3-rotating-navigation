@@ -1,4 +1,4 @@
-# Expanding Cards
+# Rotating Navigation
 
 TITLE - Rotating Navigation
 
